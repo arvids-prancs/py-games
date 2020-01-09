@@ -1,0 +1,153 @@
+#countries-main {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.34'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  user-select: none;
+  /* result-counter */
+}
+#countries-main.game {
+  display: grid;
+  grid-template-columns: 30% auto;
+  padding: 20px;
+}
+#countries-main .start-div {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: 700px;
+}
+#countries-main .start-div > div {
+  width: 420px;
+  padding: 20px;
+  margin: 10px 0;
+  font-size: 40px;
+  background-color: #575A89;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  -ms-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+#countries-main .start-div > div:hover {
+  background-color: #6C63FF;
+  cursor: pointer;
+}
+#countries-main #map {
+  position: relative;
+}
+#countries-main .result-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+#countries-main .result {
+  background-color: #669b12;
+  color: #FFFFFF;
+  padding: 30px;
+  font-size: 2rem;
+}
+#countries-main .restart-button {
+  background-color: #575A89;
+  color: #FFFFFF;
+  padding: 20px;
+  font-size: 2rem;
+  margin-top: 20px;
+  -webkit-transition: background-color 300ms linear;
+  -moz-transition: background-color 300ms linear;
+  -o-transition: background-color 300ms linear;
+  transition: background-color 300ms linear;
+}
+#countries-main .restart-button:hover {
+  background-color: #6C63FF;
+  cursor: pointer;
+}
+#countries-main path {
+  fill: #ececec;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 0.1;
+  -webkit-transition: fill 500ms linear;
+  -moz-transition: fill 500ms linear;
+  -o-transition: fill 500ms linear;
+  transition: fill 500ms linear;
+}
+#countries-main path:hover {
+  fill: #3e5fa8;
+}
+#countries-main path.true:hover {
+  fill: #0f7751;
+}
+#countries-main path.false:hover {
+  fill: crimson;
+}
+#countries-main h1 {
+  background-color: #6C63FF;
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+}
+#countries-main #country {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: #e0e0e0 1px 1px 0;
+  background-color: #575A89;
+}
+#countries-main #stats {
+  background-color: #ededef;
+  color: #FFFFFF;
+}
+#countries-main #result {
+  padding: 30px;
+}
+#countries-main #result > div {
+  display: grid;
+  grid-template-columns: auto 60px;
+  grid-template-rows: minmax(100px, auto);
+  border-bottom: 1px solid #cccccc;
+  padding: 10px 0;
+  align-items: center;
+}
+#countries-main #result > div:first-child {
+  border-top: 1px solid #cccccc;
+}
+#countries-main #result span {
+  float: left;
+  margin: 2px;
+  color: #FFFFFF;
+  padding: 3px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+#countries-main #true span {
+  background-color: #0f7751;
+}
+#countries-main #false span {
+  background-color: crimson;
+}
+#countries-main .result-counter {
+  justify-self: right;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+  padding: 0 4px;
+}
+#countries-main #trueCounter {
+  background-color: #0f7751;
+}
+#countries-main #falseCounter {
+  background-color: crimson;
+}
+
+/*# sourceMappingURL=style.css.map */

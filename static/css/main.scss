@@ -1,0 +1,115 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #FFFFFF;
+  display: grid;
+  grid-template-rows: 130px auto 50px;
+  min-height: 100vh;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  background-color: #FFFFFF;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-top: 30px solid #46BD55;
+
+  div {
+    a {
+      color: #46bd55;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 32px;
+
+      span {
+        color: #212121;
+      }
+      &:hover{
+        color: #212121;
+        span{
+          color: #46bd55;
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    a {
+      color: #212121;
+      text-decoration: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+
+
+      &:hover {
+        color: #46bd55;
+      }
+
+      &.active {
+        color: #46bd55;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  background-color: #191919;
+  color: #44B652;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.home {
+  div.background {
+    background-image: url("/static/img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 350px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    list-style: none;
+
+    li {
+      background-color: #ececec;
+      border: 1px solid #e5e5e5;
+      width: 300px;
+      margin: 0 5%;
+      background-repeat: no-repeat;
+      background-position: center 11px;
+
+
+      a {
+        color: #212121;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-top: 2px solid #46BD55;
+        margin-top: 60px;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 60px 0;
+        display: block;
+        text-align: center;
+        text-shadow: #e0e0e0 1px 1px 0;
+
+        &:hover {
+          color: #46BD55;
+        }
+      }
+    }
+  }
+}

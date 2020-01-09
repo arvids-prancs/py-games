@@ -1,0 +1,263 @@
+#blackjack-main {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='50' height='25' viewBox='0 0 50 25'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.1' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='2' height='2' patternUnits='userSpaceOnUse'%3E%3Cg stroke='%23ffffff' stroke-width='0.1'%3E%3Crect fill='%23fafafa' width='1' height='1'/%3E%3Crect fill='%23ffffff' width='1' height='1' x='1' y='1'/%3E%3Crect fill='%23f5f5f5' width='1' height='1' y='1'/%3E%3Crect fill='%23f0f0f0' width='1' height='1' x='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='b' width='5' height='11' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23ebebeb'%3E%3Cuse xlink:href='%23s' x='2' y='0'/%3E%3Cuse xlink:href='%23s' x='4' y='1'/%3E%3Cuse xlink:href='%23s' x='1' y='2'/%3E%3Cuse xlink:href='%23s' x='2' y='4'/%3E%3Cuse xlink:href='%23s' x='4' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='8'/%3E%3Cuse xlink:href='%23s' x='3' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='7' height='7' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='3' y='4'/%3E%3Cuse xlink:href='%23s' x='5' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='11' height='5' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23ffffff'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='6' y='3'/%3E%3Cuse xlink:href='%23s' x='8' y='2'/%3E%3Cuse xlink:href='%23s' x='3' y='0'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse xlink:href='%23s' x='8' y='3'/%3E%3Cuse xlink:href='%23s' x='4' y='2'/%3E%3Cuse xlink:href='%23s' x='5' y='4'/%3E%3Cuse xlink:href='%23s' x='10' y='0'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='23' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23BA7'%3E%3Cuse xlink:href='%23s' x='2' y='5'/%3E%3Cuse xlink:href='%23s' x='23' y='13'/%3E%3Cuse xlink:href='%23s' x='4' y='18'/%3E%3Cuse xlink:href='%23s' x='35' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='61' height='31' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23BA7'%3E%3Cuse xlink:href='%23s' x='16' y='0'/%3E%3Cuse xlink:href='%23s' x='13' y='22'/%3E%3Cuse xlink:href='%23s' x='44' y='15'/%3E%3Cuse xlink:href='%23s' x='12' y='11'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='50' height='25'/%3E%3Crect fill='url(%23b)' width='50' height='25'/%3E%3Crect fill='url(%23c)' width='50' height='25'/%3E%3Crect fill='url(%23d)' width='50' height='25'/%3E%3Crect fill='url(%23e)' width='50' height='25'/%3E%3Crect fill='url(%23f)' width='50' height='25'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+
+  #gameGrid {
+    display: grid;
+    background-image: url("img/background.jpg");
+    width: 900px;
+    height: 700px;
+    border: 10px solid #E0E0E0;
+    border-radius: 50px;
+    padding: 13px;
+    position: relative;
+  }
+
+  #gameGrid.intro {
+    grid-template-rows: 100%;
+    background: url("img/intro.png") center 50px no-repeat, url("img/background.jpg");
+    align-items: end;
+    justify-items: center;
+  }
+
+  #gameGrid.intro > div {
+    margin-bottom: 100px;
+  }
+
+  #gameGrid.game {
+    grid-template-rows: 30% 20% 30% auto;
+  }
+
+  /* button */
+  .button-div {
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: inset 0px 1px 0px 0px #7a8eb9;
+    background: linear-gradient(to bottom, #637aad 5%, #5972a7 100%);
+    background-color: #637aad;
+    border: 1px solid #314179;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .button-div:hover {
+    background: linear-gradient(to bottom, #5972a7 5%, #637aad 100%);
+    background-color: #5972a7;
+  }
+
+  .button-div:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .button-div.green {
+    box-shadow: inset 0px 1px 0px 0px #9acc85;
+    background: linear-gradient(to bottom, #74ad5a 5%, #68a54b 100%);
+    background-color: #74ad5a;
+    border: 1px solid #3b6e22;
+  }
+
+  .button-div.green:hover {
+    background: linear-gradient(to bottom, #68a54b 5%, #74ad5a 100%);
+    background-color: #68a54b;
+  }
+
+  /* row1 */
+
+  /* row2 */
+  #row2 {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+  }
+
+  #row2 .left-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #row2 .center-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #row2 .center-div #chip-holder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #548443;
+    position: relative;
+  }
+
+  #row2 .center-div #chip-holder img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    left: -2px;
+    top: -2px;
+  }
+
+  #row2 .center-div #chip-holder img:hover {
+    cursor: pointer;
+    border-color: #ADFF26;
+  }
+
+  #row2 .center-div #bet {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0 20px;
+    min-width: 120px;
+  }
+
+  #row2 .right-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  /* row3 */
+  .row_1_3 {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+
+  .row_1_3 .left-div,
+  .row_1_3 .right-div {
+    display: flex;
+    align-items: center;
+  }
+
+  .row_1_3 .left-div {
+    padding-right: 30px;
+    justify-content: flex-end;
+  }
+
+  .row_1_3 .right-div {
+    padding-left: 100px;
+  }
+
+  .row_1_3 .right-div img {
+    margin-left: -92px;
+    opacity: 1;
+    animation: fadeIn 0.5s ease;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      margin-top: 25px;
+    }
+
+    100% {
+      opacity: 1;
+      margin-top: 0px;
+    }
+  }
+
+
+  /* row4 */
+  #row4 {
+    display: grid;
+    grid-template-columns: 75% auto;
+    align-items: center;
+  }
+
+  #row4 img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0);
+  }
+
+  #row4 img:hover {
+    cursor: pointer;
+    border-color: #ADFF26;
+  }
+
+  #bank {
+    font-weight: bold;
+    color: #ADFF26;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .bank-text {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .player-points {
+    color: #ffffff;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 23px 0;
+  }
+
+  .player-text {
+    font-size: 2rem;
+    color: rgba(50, 185, 50, 1);
+    padding-right: 30px;
+  }
+
+  #result {
+    position: absolute;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #result > div {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 20px 30px;
+    margin-bottom: 135px;
+  }
+
+  #result.lost > div {
+    background-color: rgba(255, 0, 0);
+  }
+
+  #result.won > div {
+    background-color: rgba(0, 0, 255);
+  }
+
+  #result.won-blackjack > div {
+    background-color: #ADFF26;
+  }
+
+  #result.lost-blackjack > div {
+    background-color: rgba(255, 0, 0);
+  }
+
+  #result.push > div {
+    background-color: #e916cd;
+  }
+}
+

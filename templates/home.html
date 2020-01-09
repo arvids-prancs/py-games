@@ -1,0 +1,10 @@
+<div class="home">
+    <div class="background"></div>
+    <ul>
+        {% for item in nav %}
+        <li style="background-image: url({{ url_for('static', filename=item.ico) }});">
+            <a href="{{ item.route }}">{{ item.nav_title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

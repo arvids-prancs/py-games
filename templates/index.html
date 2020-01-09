@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <link rel="shortcut icon" href="/static/img/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+          integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="/static/js/blackjack/style.css"/>
+    <link media="all" type="text/css" rel="stylesheet" href="/static/js/valstis/style.css"/>
+    <link media="all" type="text/css" rel="stylesheet" href="/static/css/main.css?v={{csstime}}"/>
+    <title>{{page.page_title}}</title>
+</head>
+<body>
+<header>
+    <div>
+        <a href="/"><span>Manas</span>Spēles</a>
+    </div>
+    <ul>
+        {% for item in nav %}
+        <li>
+            {% if item.id==page.id %}
+            <a href="{{ item.route }}" class="active">{{ item.nav_title }}</a>
+            {% else %}
+            <a href="{{ item.route }}">{{ item.nav_title }}</a>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</header>
+<div id="content">{% include page.template %}</div>
+<footer>
+    <div>@ Arvīds Prančs</div>
+</footer>
+</body>
+</html>
