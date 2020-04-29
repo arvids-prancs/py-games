@@ -1,0 +1,22 @@
+{
+    "messages": [
+        {
+            "message": "Tests",
+            "timestamp": "29.04.2020 22:12",
+            "user": "ap18032",
+            "usercolor": 5
+        },
+        {
+            "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "timestamp": "29.04.2020 22:13",
+            "user": "Arvīds",
+            "usercolor": 4
+        },
+        {
+            "message": "Šķūnis",
+            "timestamp": "29.04.2020 22:15",
+            "user": "Arvīds",
+            "usercolor": 4
+        }
+    ]
+}
