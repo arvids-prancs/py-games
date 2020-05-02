@@ -2,9 +2,10 @@ class Chat {
     constructor(container) {
         this.container = document.getElementById(container);
         this.username = "NoName";
-        this.refresh = 50000;
+        this.refresh = 1000;
         this.usercolor = "";
         this.usercolors = ["#FF4500", "#663399", "#4169E1", "#FF0000", "#2E8B57", "#EE82EE", "#008080", "#9ACD32", "#191970", "#800000", "#1E90FF", "#DC143C"];
+        this.version = "0.0.1"
     }
 
     start() {
@@ -23,8 +24,8 @@ class Chat {
         user.id = "username";
         user.name = "username";
         user.addEventListener("keyup", event => {
-            if (event.keyCode === 13) {
-                this.username = user.value;
+            if (event.keyCode === 13 && user.value !== '') {
+                this.username = this.htmlEntities(user.value);
                 this.usercolor = Math.floor(Math.random() * (this.usercolors.length + 1));
                 this.displayChat();
             }
@@ -35,9 +36,11 @@ class Chat {
         startButton.className = "user-login-button";
         startButton.innerHTML = "Ieiet";
         startButton.onclick = () => {
-            this.username = user.value;
-            this.usercolor = Math.floor(Math.random() * (this.usercolors.length + 1));
-            this.displayChat();
+            if (user.value !== '') {
+                this.username = this.htmlEntities(user.value);
+                this.usercolor = Math.floor(Math.random() * (this.usercolors.length + 1));
+                this.displayChat();
+            }
         };
         startDiv.appendChild(startButton);
     }
@@ -63,7 +66,8 @@ class Chat {
         input.id = "zinja";
         input.placeholder = "Raksti ziņu";
         input.addEventListener("keyup", event => {
-            if (event.keyCode === 13) {
+            let zinjasElement = document.getElementById("zinja");
+            if (event.keyCode === 13 && zinjasElement.value !== '') {
                 this.suutiZinju().then(data => {
                     this.raadiChataRindas(data);
                 });
@@ -74,9 +78,12 @@ class Chat {
         let button = document.createElement("button");
         button.title = "Sūtīt";
         button.onclick = () => {
-            this.suutiZinju().then(data => {
-                this.raadiChataRindas(data);
-            });
+            let zinjasElement = document.getElementById("zinja");
+            if (zinjasElement.value !== '') {
+                this.suutiZinju().then(data => {
+                    this.raadiChataRindas(data);
+                });
+            }
         };
         inputDiv.appendChild(button);
         this.lasiChatu();
@@ -98,7 +105,7 @@ class Chat {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                "message": message,
+                "message": this.htmlEntities(message),
                 "user": this.username,
                 "timestamp": "",
                 "usercolor": this.usercolor
@@ -144,5 +151,9 @@ class Chat {
         while (dom.lastChild) {
             dom.removeChild(dom.lastChild);
         }
+    }
+
+    htmlEntities(str) {
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 }
