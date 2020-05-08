@@ -108,4 +108,40 @@ footer {
   justify-content: center;
 }
 
+#movies-main {
+  padding: 20px;
+}
+#movies-main .movies-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  background-color: #F2F2F2;
+}
+@media (min-width: 992px) {
+  #movies-main .movies-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+#movies-main .movies-list > div {
+  padding: 10px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  margin: 10px;
+}
+#movies-main .movies-list > div .movies-categories {
+  text-transform: capitalize;
+  color: darkred;
+  font-weight: bold;
+}
+#movies-main .movies-list > div h3 {
+  color: #4183D7;
+  margin-top: 5px;
+}
+#movies-main .movies-list > div .movies-year {
+  color: #0f7751;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
 /*# sourceMappingURL=main.css.map */

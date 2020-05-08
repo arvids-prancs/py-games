@@ -1,3 +1,31 @@
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -125,4 +153,43 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#movies-main {
+  padding: 20px;
+
+  .movies-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background-color: #F2F2F2;
+    @include lg {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    > div {
+      padding: 10px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      margin: 10px;
+
+      .movies-categories {
+        text-transform: capitalize;
+        color: darkred;
+        font-weight: bold;
+      }
+
+      h3 {
+        color: #4183D7;
+        margin-top: 5px;
+      }
+
+      .movies-year {
+        color: #0f7751;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+    }
+  }
 }

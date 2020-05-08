@@ -1,0 +1,24 @@
+<div class="movies">
+    <div id="movies-main">
+        <h2>Filmas</h2>
+        <div class="movies-list">
+            {%for item in data.movies%}
+            <div>
+                <div class="movies-categories">
+                    {%for category in item.categories%}
+                    <span>{{category.lat_singular}}</span>
+                    {%endfor%}
+                </div>
+                <h3>{{item.title_lat}}</h3>
+                <div class="movies-studios">
+                    {%for studio in item.studios%}
+                    <span>{{studio.title_lat}}</span>
+                    {%endfor%}
+                </div>
+                <div class="movies-year">{{item.year}}</div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+</div>
